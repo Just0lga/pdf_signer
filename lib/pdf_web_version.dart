@@ -401,6 +401,20 @@ class _PdfWebVersionState extends State<PdfWebVersion> {
 
   void _clearSignature() {
     _signatureController.clear();
+
+    if (_selectedSignatureArea != null &&
+        _signatures.containsKey(_selectedSignatureArea)) {
+      setState(() {
+        _signatures.remove(_selectedSignatureArea);
+      });
+
+      ScaffoldMessenger.of(context).showSnackBar(
+        SnackBar(
+          content: Text('İmza temizlendi'),
+          backgroundColor: Colors.orange,
+        ),
+      );
+    }
   }
 
   Future<void> _saveSignature() async {
