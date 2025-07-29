@@ -1,0 +1,38 @@
+name: pdf_signer
+description: "This app design for signing pdf easily."
+
+publish_to: 'none'
+
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.0.0 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+  # For mobile
+  syncfusion_flutter_pdf: ^30.1.41        # PDF manipülasyonu için gerekli
+  syncfusion_flutter_pdfviewer: ^30.1.41
+  syncfusion_flutter_signaturepad: ^30.1.41
+  path_provider: ^2.1.5
+  share_plus: ^11.0.0
+  file_picker: ^10.2.0
+  http: ^1.4.0                             # HTTP istekleri için gerekli
+
+  # For web
+  signature: ^5.4.0
+  printing: ^5.11.0
+  pdf: ^3.10.7
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^3.0.0
+
+flutter:
+  uses-material-design: true
+
+  assets:
+    - assets/sample.pdf
+
